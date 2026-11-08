@@ -157,7 +157,15 @@ const showTableTitle = computed(() => {
 
 const showToolbar = computed(() => {
   return (
-    !!slots[TOOLBAR_ACTIONS] || !!slots[TOOLBAR_TOOLS] || showTableTitle.value
+    !!slots[TOOLBAR_ACTIONS] ||
+    !!slots[TOOLBAR_TOOLS] ||
+    showTableTitle.value ||
+    // 未提供插槽/标题时，配置了标准按钮（刷新/缩放/自定义列）同样启用工具栏
+    !!(
+      gridOptions.value?.toolbarConfig?.refresh ||
+      gridOptions.value?.toolbarConfig?.zoom ||
+      gridOptions.value?.toolbarConfig?.custom
+    )
   );
 });
 

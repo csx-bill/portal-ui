@@ -14,6 +14,8 @@ export interface TreeProps {
   checkStrictly?: boolean;
   /** 子级字段名 */
   childrenField?: string;
+  /** 显示顶部「全部展开/收起」切换行（多选时含全选复选框） */
+  collapsible?: boolean;
   /** 默认展开的键 */
   defaultExpandedKeys?: Array<number | string>;
   /** 默认展开的级别（优先级高于defaultExpandedKeys） */
@@ -53,6 +55,7 @@ export function treePropsDefaults() {
     autoCheckParent: true,
     bordered: false,
     checkStrictly: false,
+    collapsible: true,
     defaultExpandedKeys: () => [],
     defaultExpandedLevel: 0,
     disabled: false,

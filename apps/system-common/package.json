@@ -1,0 +1,45 @@
+{
+  "name": "@vben/system-common",
+  "version": "5.8.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "pnpm vite build --mode production",
+    "build:watch": "pnpm vite build --mode production --watch",
+    "dev": "node ./scripts/dev.mjs",
+    "preview": "pnpm vite preview --mode development --port 3200 --strictPort",
+    "typecheck": "vue-tsc --noEmit --skipLibCheck"
+  },
+  "imports": {
+    "#/*": "./src/*"
+  },
+  "exports": {
+    "./constants": "./src/shared/tenant-contract.ts"
+  },
+  "dependencies": {
+    "@vben/common-ui": "workspace:*",
+    "@vben/icons": "workspace:*",
+    "@vben/locales": "workspace:*",
+    "@vben/plugins": "workspace:*",
+    "@vben/preferences": "workspace:*",
+    "@vben/stores": "workspace:*",
+    "@vben/utils": "workspace:*",
+    "@vueuse/core": "catalog:",
+    "antdv-next": "catalog:",
+    "dayjs": "catalog:",
+    "pinia": "catalog:",
+    "vue": "catalog:",
+    "vue-router": "catalog:",
+    "vxe-pc-ui": "catalog:"
+  },
+  "devDependencies": {
+    "@originjs/vite-plugin-federation": "catalog:",
+    "@vben/request": "workspace:*",
+    "@vben/tsconfig": "workspace:*",
+    "@vben/types": "workspace:*",
+    "@vben/vite-config": "workspace:*",
+    "typescript": "catalog:",
+    "vite": "catalog:",
+    "vue-tsc": "catalog:"
+  }
+}

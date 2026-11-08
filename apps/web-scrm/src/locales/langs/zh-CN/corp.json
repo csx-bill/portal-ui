@@ -1,0 +1,20 @@
+{
+  "agentId": "应用ID",
+  "agentName": "应用名称",
+  "app": "应用",
+  "authStatus": "授权状态",
+  "authStatusDisabled": "已取消/过期",
+  "authStatusOk": "正常授权",
+  "corpId": "企业ID",
+  "corpIdPlaceholder": "请输入企业ID（精确匹配）",
+  "corpName": "企业名称",
+  "corpNamePlaceholder": "请输入企业名称（模糊匹配）",
+  "corpType": "应用类型",
+  "corpTypeSelf": "自建应用",
+  "corpTypeSuite": "代开发",
+  "createTime": "创建时间",
+  "description": "企业微信授权企业列表，展示企业与应用的授权信息",
+  "logo": "Logo",
+  "seq": "序号",
+  "title": "企业管理"
+}

@@ -49,8 +49,23 @@ pre-commit:
       glob: '*.{js,jsx,ts,tsx,vue,cjs,mjs,cts,mts}'
       run: pnpm exec oxlint --fix --type-aware --threads=4 --no-error-on-unmatched-pattern {staged_files}
       stage_fixed: true
-    - name: oxfmt
+    # Windows 下单条命令行约 8K 字符上限：暂存文件过多时一次性传参会超限
+    # 报“命令行太长”，因此按目录拆成多个任务，保证每条命令足够短
+    - name: oxfmt:web-scrm
+      root: apps/web-scrm
       glob: '*.{js,jsx,ts,tsx,vue,cjs,mjs,cts,mts,json,jsonc}'
+      run: pnpm exec oxfmt --threads=4 --no-error-on-unmatched-pattern {staged_files}
+      stage_fixed: true
+    - name: oxfmt:system-common
+      root: apps/system-common
+      glob: '*.{js,jsx,ts,tsx,vue,cjs,mjs,cts,mts,json,jsonc}'
+      run: pnpm exec oxfmt --threads=4 --no-error-on-unmatched-pattern {staged_files}
+      stage_fixed: true
+    - name: oxfmt:misc
+      glob: '*.{js,jsx,ts,tsx,vue,cjs,mjs,cts,mts,json,jsonc}'
+      exclude:
+        - apps/system-common/**
+        - apps/web-scrm/**
       run: pnpm exec oxfmt --threads=4 --no-error-on-unmatched-pattern {staged_files}
       stage_fixed: true
     - name: eslint

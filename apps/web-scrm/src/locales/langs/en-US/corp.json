@@ -1,0 +1,20 @@
+{
+  "agentId": "Agent ID",
+  "agentName": "Agent Name",
+  "app": "App",
+  "authStatus": "Auth Status",
+  "authStatusDisabled": "Cancelled/Expired",
+  "authStatusOk": "Authorized",
+  "corpId": "Corp ID",
+  "corpIdPlaceholder": "Enter corp ID (exact match)",
+  "corpName": "Corp Name",
+  "corpNamePlaceholder": "Enter corp name (fuzzy match)",
+  "corpType": "App Type",
+  "corpTypeSelf": "Self-built",
+  "corpTypeSuite": "Suite",
+  "createTime": "Created At",
+  "description": "List of WeCom authorized corps with their app auth info",
+  "logo": "Logo",
+  "seq": "No.",
+  "title": "Enterprise Management"
+}

@@ -1,4 +1,5 @@
 export * from './config';
+export * from './federation';
 export * from './options';
 export * from './plugins';
 export type * from './typing';
