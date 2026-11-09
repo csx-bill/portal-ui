@@ -5,12 +5,16 @@
 
 基于 [Vue Vben Admin 5.x](https://doc.vben.pro/) 的门户平台前端，采用 `Vue3`、`Vite`、`TypeScript`、`Tailwind CSS v4`、`Turborepo` + `pnpm` 的 monorepo 架构，并通过模块联邦（Module Federation）拆分宿主应用与共享模块。
 
-配套后端为同级目录 `../portal-service`（Java 21 / Maven 多模块：portal-boot、portal-auth、portal-system、portal-scrm、portal-common），本地开发默认监听 `:8080`。
-
 ## 仓库地址
 
 - 前端 portal-ui（本仓库）：<https://github.com/csx-bill/portal-ui>
 - 后端 portal-service：<https://github.com/csx-bill/portal-service>
+
+## 产品预览
+
+**web-scrm 登录页**（企业微信客户运营平台）：
+
+![web-scrm 登录页](docs/images/web-scrm-login.png)
 
 ## 项目结构
 
@@ -132,7 +136,6 @@ Tailwind CSS v4 要求 Safari 16.4+、Chrome 111+、Firefox 128+，仅支持现�
 ## 相关文档
 
 - 框架层（组件、hooks、preferences 等）用法请参考 [Vue Vben Admin 文档](https://doc.vben.pro/)
-- 后端接口与部署见 `../portal-service`
 
 ## License
 
