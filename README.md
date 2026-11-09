@@ -7,6 +7,11 @@
 
 配套后端为同级目录 `../portal-service`（Java 21 / Maven 多模块：portal-boot、portal-auth、portal-system、portal-scrm、portal-common），本地开发默认监听 `:8080`。
 
+## 仓库地址
+
+- 前端 portal-ui（本仓库）：<https://github.com/csx-bill/portal-ui>
+- 后端 portal-service：<https://github.com/csx-bill/portal-service>
+
 ## 项目结构
 
 ```
